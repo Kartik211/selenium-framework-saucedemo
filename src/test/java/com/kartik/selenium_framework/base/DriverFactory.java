@@ -2,25 +2,28 @@ package com.kartik.selenium_framework.base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class DriverFactory {
 
-    private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+    public static WebDriver initializeDriver(String browser) {
 
-    public static void initDriver() {
-        WebDriverManager.chromedriver().setup();
-        driver.set(new ChromeDriver());
-    }
+        WebDriver driver = null;
 
-    public static WebDriver getDriver() {
-        return driver.get();
-    }
+        if (browser.equalsIgnoreCase("chrome")) {
 
-    public static void quitDriver() {
-        if(driver.get()!=null){
-            driver.get().quit();
-            driver.remove();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--remote-allow-origins=*");
+            driver = new ChromeDriver(options);
+
+        } else {
+            throw new RuntimeException("Browser not supported: " + browser);
         }
+
+        driver.manage().window().maximize();
+        driver.get("https://www.saucedemo.com/");
+
+        return driver;
     }
 }
+

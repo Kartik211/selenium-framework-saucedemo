@@ -1,19 +1,27 @@
 package com.kartik.selenium_framework.base;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
 
+    private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+
     @BeforeMethod
-    public void setUp() {
-        DriverFactory.initDriver();
-        DriverFactory.getDriver().manage().window().maximize();
-        DriverFactory.getDriver().get("https://www.saucedemo.com/");
+    public void setup() {
+        driver.set(DriverFactory.initializeDriver("chrome"));
+    }
+
+    public WebDriver getDriver() {
+        return driver.get();
     }
 
     @AfterMethod
     public void tearDown() {
-        DriverFactory.quitDriver();
+        if (driver.get() != null) {
+            driver.get().quit();
+        }
     }
 }
+
