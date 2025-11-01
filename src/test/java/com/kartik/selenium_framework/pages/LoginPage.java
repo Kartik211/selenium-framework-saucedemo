@@ -5,26 +5,32 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage extends BasePage {
+public class LoginPage {
 
+    private WebDriver driver;
+
+    // Locate elements using @FindBy
     @FindBy(id = "user-name")
-    private WebElement username;
+    private WebElement usernameInput;
 
     @FindBy(id = "password")
-    private WebElement password;
+    private WebElement passwordInput;
 
     @FindBy(id = "login-button")
-    private WebElement loginBtn;
+    private WebElement loginButton;
 
+    // Constructor
     public LoginPage(WebDriver driver) {
-        super(driver);
+        this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    public void login(String user, String pass) {
-        type(username, user);
-        type(password, pass);
-        click(loginBtn);
+    // Updated login method returning HomePage
+    public HomePage login(String username, String password) {
+        usernameInput.sendKeys(username);
+        passwordInput.sendKeys(password);
+        loginButton.click();
+        return new HomePage(driver);
     }
 }
 
