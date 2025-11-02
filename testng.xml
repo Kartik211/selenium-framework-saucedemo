@@ -1,0 +1,14 @@
+<suite name="Selenium Automation Suite" parallel="false">
+
+    <listeners>
+        <listener class-name="com.kartik.selenium_framework.listeners.TestListener"/>
+    </listeners>
+
+    <test name="UI Tests">
+        <classes>
+            <class name="com.kartik.selenium_framework.tests.LoginTest"/>
+            <class name="com.kartik.selenium_framework.tests.HomePageTest"/>
+        </classes>
+    </test>
+
+</suite>

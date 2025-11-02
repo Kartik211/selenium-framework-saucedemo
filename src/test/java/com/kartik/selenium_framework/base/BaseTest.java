@@ -3,6 +3,7 @@ package com.kartik.selenium_framework.base;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import com.kartik.selenium_framework.utils.ConfigReader;
 
 public class BaseTest {
 
@@ -10,7 +11,8 @@ public class BaseTest {
 
     @BeforeMethod
     public void setup() {
-        driver.set(DriverFactory.initializeDriver("chrome"));
+        driver.set(DriverFactory.initializeDriver());
+        getDriver().get(ConfigReader.get("baseUrl"));
     }
 
     public WebDriver getDriver() {
