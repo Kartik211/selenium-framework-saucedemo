@@ -2,34 +2,34 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-02T18:08:14 IST" name="Selenium Automation Suite" finished-at="2025-11-02T18:08:27 IST" duration-ms="13510">
+  <suite started-at="2025-11-03T22:28:24 IST" name="Selenium Automation Suite" finished-at="2025-11-03T22:28:42 IST" duration-ms="18426">
     <groups>
     </groups>
-    <test started-at="2025-11-02T18:08:14 IST" name="UI Tests" finished-at="2025-11-02T18:08:27 IST" duration-ms="13510">
+    <test started-at="2025-11-03T22:28:24 IST" name="UI Tests" finished-at="2025-11-03T22:28:42 IST" duration-ms="18426">
       <class name="com.kartik.selenium_framework.tests.HomePageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.kartik.selenium_framework.tests.HomePageTest@3d285d7e]" started-at="2025-11-02T18:08:24 IST" name="setup" finished-at="2025-11-02T18:08:26 IST" duration-ms="2266" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.kartik.selenium_framework.tests.HomePageTest@367ffa75]" started-at="2025-11-03T22:28:35 IST" name="setup" finished-at="2025-11-03T22:28:41 IST" duration-ms="6842" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyHomePageTitleTest()[pri:0, instance:com.kartik.selenium_framework.tests.HomePageTest@3d285d7e]" started-at="2025-11-02T18:08:26 IST" name="verifyHomePageTitleTest" description="Verify user can login and land on Home page with Products title" finished-at="2025-11-02T18:08:27 IST" duration-ms="698" status="PASS">
+        <test-method signature="verifyHomePageTitleTest()[pri:0, instance:com.kartik.selenium_framework.tests.HomePageTest@367ffa75]" started-at="2025-11-03T22:28:41 IST" name="verifyHomePageTitleTest" finished-at="2025-11-03T22:28:42 IST" duration-ms="573" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomePageTitleTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.kartik.selenium_framework.tests.HomePageTest@3d285d7e]" started-at="2025-11-02T18:08:27 IST" name="tearDown" finished-at="2025-11-02T18:08:27 IST" duration-ms="503" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.kartik.selenium_framework.tests.HomePageTest@367ffa75]" started-at="2025-11-03T22:28:42 IST" name="tearDown" finished-at="2025-11-03T22:28:42 IST" duration-ms="243" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.kartik.selenium_framework.tests.HomePageTest -->
       <class name="com.kartik.selenium_framework.tests.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.kartik.selenium_framework.tests.LoginTest@3c41ed1d]" started-at="2025-11-02T18:08:14 IST" name="setup" finished-at="2025-11-02T18:08:22 IST" duration-ms="8014" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.kartik.selenium_framework.tests.LoginTest@43bc63a3]" started-at="2025-11-03T22:28:24 IST" name="setup" finished-at="2025-11-03T22:28:33 IST" duration-ms="9580" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginTest()[pri:0, instance:com.kartik.selenium_framework.tests.LoginTest@3c41ed1d]" started-at="2025-11-02T18:08:22 IST" name="loginTest" finished-at="2025-11-02T18:08:23 IST" duration-ms="1416" status="PASS">
+        <test-method signature="validLoginTest()[pri:0, instance:com.kartik.selenium_framework.tests.LoginTest@43bc63a3]" started-at="2025-11-03T22:28:33 IST" name="validLoginTest" finished-at="2025-11-03T22:28:34 IST" duration-ms="899" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.kartik.selenium_framework.tests.LoginTest@3c41ed1d]" started-at="2025-11-02T18:08:24 IST" name="tearDown" finished-at="2025-11-02T18:08:24 IST" duration-ms="466" status="PASS">
+        </test-method> <!-- validLoginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.kartik.selenium_framework.tests.LoginTest@43bc63a3]" started-at="2025-11-03T22:28:34 IST" name="tearDown" finished-at="2025-11-03T22:28:35 IST" duration-ms="227" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

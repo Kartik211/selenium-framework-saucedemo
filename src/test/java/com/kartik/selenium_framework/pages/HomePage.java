@@ -1,32 +1,33 @@
 package com.kartik.selenium_framework.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import com.kartik.selenium_framework.utils.WaitUtils;
 
-// Page object for the landing / inventory page after successful login
 public class HomePage {
-
+    
     private WebDriver driver;
 
-    @FindBy(css = "span.title")   // SauceDemo shows "Products" in span.title
-    private WebElement productsTitle;
+    private By pageTitle = By.className("title");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver, this);
     }
 
-    // Return the displayed page title (e.g., "Products")
     public String getHomePageTitle() {
-        try {
-            return productsTitle.getText().trim();
-        } catch (Exception e) {
-            return driver.getTitle(); // fallback to browser title
-        }
+        WaitUtils.waitForElementVisible(driver, pageTitle, 10);
+        return driver.findElement(pageTitle).getText();
+    }
+
+    public void verifyTitle(String expectedTitle) {
+        String actualTitle = getHomePageTitle();
+        org.testng.Assert.assertEquals(actualTitle, expectedTitle, "Home page title mismatch!");
     }
 }
+
+
+
+
 
 
 
