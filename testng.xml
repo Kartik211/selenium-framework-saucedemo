@@ -1,5 +1,8 @@
 <suite name="Selenium Automation Suite" parallel="false">
 
+    <!-- Add global browser parameter -->
+    <parameter name="browser" value="chrome" />
+
     <listeners>
         <listener class-name="com.kartik.selenium_framework.listeners.TestListener"/>
     </listeners>

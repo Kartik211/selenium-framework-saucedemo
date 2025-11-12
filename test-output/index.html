@@ -163,6 +163,7 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Selenium Automation Suite&quot;&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.kartik.selenium_framework.listeners.TestListener&quot;/&gt;
   &lt;/listeners&gt;
@@ -213,16 +214,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'validLoginTest')
 data.setCell(0, 2, 'com.kartik.selenium_framework.tests.LoginTest')
-data.setCell(0, 3, 953);
+data.setCell(0, 3, 2024);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyHomePageTitleTest')
 data.setCell(1, 2, 'com.kartik.selenium_framework.tests.HomePageTest')
-data.setCell(1, 3, 571);
+data.setCell(1, 3, 401);
 window.suiteTableData['Selenium_Automation_Suite']= { tableData: data, tableDiv: 'times-div-Selenium_Automation_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Selenium_Automation_Suite">
               </div> <!-- times-div-Selenium_Automation_Suite -->
             </div> <!-- times-div -->
@@ -250,31 +251,31 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.kartik.selenium_framework.tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setup</span>
+                <span class="method-name">setUp(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">validLoginTest</span>
-                <span class="method-start">4619 ms</span>
+                <span class="method-start">3154 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">5580 ms</span>
+                <span class="method-start">5187 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.kartik.selenium_framework.tests.HomePageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">5768 ms</span>
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">5324 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyHomePageTitleTest</span>
-                <span class="method-start">7099 ms</span>
+                <span class="method-start">6603 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">7673 ms</span>
+                <span class="method-start">7007 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
