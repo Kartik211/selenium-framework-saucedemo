@@ -2,7 +2,7 @@ package com.kartik.selenium_framework.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import com.kartik.selenium_framework.utils.WaitUtils;
+import org.openqa.selenium.WebElement;
 
 public class BasePage {
     protected WebDriver driver;
@@ -12,16 +12,26 @@ public class BasePage {
     }
 
     public void click(By locator) {
-        WaitUtils.waitForElementClickable(driver, locator, 10).click();
+        driver.findElement(locator).click();
     }
 
     public void type(By locator, String text) {
-        WaitUtils.waitForElementVisible(driver, locator, 10).sendKeys(text);
+        driver.findElement(locator).sendKeys(text);
     }
 
     public String getText(By locator) {
-        return WaitUtils.waitForElementVisible(driver, locator, 10).getText();
+        return driver.findElement(locator).getText();
+    }
+
+    // ✅ Newly added method
+    public boolean isElementDisplayed(By locator) {
+        try {
+            return driver.findElement(locator).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
 }
+
 
 

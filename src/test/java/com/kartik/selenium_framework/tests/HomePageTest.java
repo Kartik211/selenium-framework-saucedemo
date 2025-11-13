@@ -8,12 +8,34 @@ import org.testng.annotations.Test;
 public class HomePageTest extends BaseTest {
 
     @Test
-    public void verifyHomePageTitleTest() {
-        LoginPage login = new LoginPage(driver);
-        HomePage home = login.login("standard_user", "secret_sauce");
-        home.verifyTitle("Products"); // ✅ Now should PASS
+    public void verifyHomePageTitle() {
+        LoginPage loginPage = new LoginPage(driver);
+        HomePage homePage = loginPage.login("standard_user", "secret_sauce");
+        homePage.verifyTitle("Products");
+    }
+
+    @Test
+    public void verifySortDropdownVisible() {
+        LoginPage loginPage = new LoginPage(driver);
+        HomePage homePage = loginPage.login("standard_user", "secret_sauce");
+        homePage.verifySortDropdownVisible();
+    }
+
+    @Test
+    public void verifyAddToCartButtonVisible() {
+        LoginPage loginPage = new LoginPage(driver);
+        HomePage homePage = loginPage.login("standard_user", "secret_sauce");
+        homePage.verifyAddToCartButtonVisible();
+    }
+
+    @Test
+    public void verifyCartIconVisible() {
+        LoginPage loginPage = new LoginPage(driver);
+        HomePage homePage = loginPage.login("standard_user", "secret_sauce");
+        homePage.verifyCartIconVisible();
     }
 }
+
 
 
 
