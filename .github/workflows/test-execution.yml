@@ -23,5 +23,5 @@ jobs:
       - name: Install dependencies
         run: mvn install -DskipTests=true
 
-      - name: Run Selenium Tests
-        run: mvn test -Dbrowser=chrome
+      - name: Run Selenium Tests in Headless Mode
+        run: mvn test -Dbrowser=chrome -Dheadless=true
